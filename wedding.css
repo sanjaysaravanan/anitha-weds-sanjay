@@ -160,6 +160,12 @@ header  a {
     margin-left: 0px;
     font-size: 48px;
   }
+  .title-section > h1 {
+    line-height: 40px;
+  }
+  .title-section > h2 {
+    margin-top: 16px;
+  }
   header  a {
     font-size: 14px;
   }
