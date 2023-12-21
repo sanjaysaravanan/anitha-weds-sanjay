@@ -2,6 +2,7 @@ body {
   margin: 0px;
   height: 200vh;
   font-family: sans-serif;
+  background-image: url("./background-18.png");
 }
 
 header {
@@ -17,7 +18,7 @@ header {
 }
 
 .title-section {
-  background-image: url("./background-18.png");
+  /* background-image: url("./background-18.png"); */
   padding: 16px 0 0;
   margin-top: 122px;
   text-align: center;
@@ -25,15 +26,23 @@ header {
 }
 
 .title-section > h1 {
-  margin: 0px;
+  margin: 0;
   font-weight: 500;
-  font-size: 64px;
+  font-size: 56px;
 }
 
 .title-section > h2 {
   margin: 0px;
   font-weight: 600;
   font-size: 24px;
+}
+
+.title-section > img {
+  display: none;
+}
+
+.ampersan {
+  font-size: 32px;
 }
 
 .count-down {
@@ -44,6 +53,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
 .count-down > div {
@@ -80,7 +91,7 @@ header  a {
   text-decoration: none;
   text-transform: uppercase;
   margin: 8px;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .header-logo {
@@ -89,6 +100,67 @@ header  a {
   top: 16px;
 }
 
-header > img {
+.image-logo {
   object-fit: contain;
+}
+
+@media screen and (max-width: 1100px) {
+  .header-logo {
+    top: 32px !important;
+  }
+  .img-logo {
+    width: 260px !important;
+  }
+  .title-section {
+    margin-left: 48px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .title-section {
+    margin-left: 256px;
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .header-logo {
+    top: 125px !important;
+  }
+  .count-down > .title {
+    width: 100%;
+    margin: 16px 0;
+  }
+  .count-down h1 {
+    font-size: 36px;
+  }
+  
+  .count-down h4 {
+    font-weight: 600;
+  }
+  .img-logo {
+    width: 300px !important;
+  }
+  .ampersan {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header-logo {
+    top: 16px !important;
+  }
+  .img-logo {
+    width: 100px !important;
+  }
+  .title-section > img {
+    display: inline;
+  }
+  .title-section {
+    margin-left: 16px;
+    font-size: 48px;
+  }
+  header  a {
+    font-size: 14px;
+  }
 }
