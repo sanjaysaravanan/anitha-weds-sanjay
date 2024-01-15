@@ -36,3 +36,18 @@ function updateCountdown() {
 
 setInterval(updateCountdown, 1000);
 updateCountdown();
+
+const images = ["background-18.png", "image.png", "logo.jpg"];
+
+const imageDiv = document.querySelector("image-div");
+
+const currImage = null;
+
+const loadImages = () => {
+  images.forEach((value, i) => {
+    const imgElement = document.createElement("img");
+    imgElement.src = value;
+    imgElement.alt = value;
+    imgElement.id = `image-${i}`;
+  });
+};
