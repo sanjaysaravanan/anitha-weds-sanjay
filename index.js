@@ -4,9 +4,10 @@ const headerElement = document.querySelector(".header-logo");
 window.addEventListener("scroll", (e) => {
   if (window.scrollY > 0) {
     imgElement.style.width = "100px";
-    // headerElement.style.top = "16px";
+    headerElement.style.top = "16px";
   } else {
     imgElement.style.width = "auto";
+    headerElement.style.top = "unset";
   }
 });
 
