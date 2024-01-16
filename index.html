@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="logo.JPG" type="image/jpg" />
     <link rel="stylesheet" type="text/css" href="wedding.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>A & S</title>
   </head>
   <body>
@@ -14,54 +21,130 @@
           <img src="image.png" alt="header-logo" class="img-logo" />
         </div>
       </a>
-      <nav>
-        <a href="#our-story">Our Story</a>
-        <a href="#gallery">Gallery</a>
+      <nav class="desk-nav" >
+        <a href="#functions">Functions</a>
+        <a href="#gallery" >Gallery</a>
+        <a href="#rsvp" >RSVP</a>
+      </nav>
+      <span tabindex="0" class="menu">
+        <i
+          style="display: block; line-height: 0.25"
+          class="fa-solid fa-minus fa-3x"
+        ></i>
+        <i
+          style="display: block; line-height: 0.25"
+          class="fa-solid fa-minus fa-3x"
+        ></i>
+        <i
+          style="display: block; line-height: 0.25"
+          class="fa-solid fa-minus fa-3x"
+        ></i>
+      </span>
+      <nav class="mobile-nav">
+        <a href="#functions" onclick="closeMenu()">Functions</a>
+        <a href="#gallery" onclick="closeMenu()">Gallery</a>
+        <a href="#rsvp" onclick="closeMenu()">RSVP</a>
       </nav>
     </header>
     <section id="home" class="title-section">
-      <img src="image.png" alt="header-logo"  />
-      <h1>𝓐𝓷𝓲𝓽𝓱𝓪 <span class="ampersan" >&</span> 𝓢𝓪𝓷𝓳𝓪𝔂</h1>
+      <img src="image.png" alt="header-logo" />
+      <h1>𝓐𝓷𝓲𝓽𝓱𝓪 <span class="ampersan">&</span> 𝓢𝓪𝓷𝓳𝓪𝔂</h1>
       <h2>February 19, 2024</h2>
       <h2>Madurai</h2>
     </section>
     <div class="count-down">
-      <div class="days" >
+      <div class="days">
         <h1>0</h1>
         <h4>Days</h4>
       </div>
-      <div class="hours" >
+      <div class="hours">
         <h1>0</h1>
         <h4>Hours</h4>
       </div>
-      <div class="title" >
+      <div class="title">
         <h1>Countdown</h1>
         <h1>to our big day!</h1>
       </div>
-      <div class="minutes" >
+      <div class="minutes">
         <h1>0</h1>
         <h4>Minutes</h4>
       </div>
-      <div class="seconds" >
+      <div class="seconds">
         <h1>0</h1>
         <h4>Seconds</h4>
       </div>
     </div>
-    <div id="our-story" class="site-section">
-      <h1>Our Story</h1>
-      <div class="event-description" >
-
-      </div>
-    </div>
     <div id="functions" class="site-section">
       <h1>Functions</h1>
-      <div class="event-description" >
-
+      <div>
+        <div class="event-description">
+          <h3>Wedding</h3>
+          <img
+            src="https://cdn.weddingwishlist.com/images/website/functions/wedding-function-wedding.jpg"
+            alt="Wedding"
+          />
+          <div style="margin: 32px">
+            <h4>Monday<br />February 19 2024</h4>
+            <h4>9:30 AM</h4>
+          </div>
+          <div class="text-div">
+            <i class="fa-solid fa-location-dot fa-2x"></i>
+            <a
+              href="https://maps.app.goo.gl/6xrok5CvLw7eaYAq8"
+              target="_blank"
+              style="margin-left: 16px"
+            >
+              Park Murugan Temple
+            </a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="event-description">
+          <h3>Reception</h3>
+          <img
+            src="reception.JPG"
+            alt="Reception"
+          />
+          <div style="margin: 32px">
+            <h4>Monday<br />February 19 2024</h4>
+            <h4>10:30 AM</h4>
+          </div>
+          <div class="text-div">
+            <i class="fa-solid fa-location-dot fa-2x"></i>
+            <a
+              href="https://maps.app.goo.gl/TxEoCfqn2jsUarzCA"
+              target="_blank"
+              style="margin-left: 16px"
+              >Hotel Arasan Sapthagiri</a
+            >
+          </div>
+        </div>
       </div>
     </div>
     <div id="gallery" class="site-section">
       <h1>Gallery</h1>
     </div>
-    <script src="index.js" ></script>
+    <div id="rsvp" class="site-section">
+      <h1>R S V P</h1>
+      <form class="rsvp-container" >
+        <input name="fname" id="fname" placeholder="Full Name" />
+        <br />
+        <p>Please let us know whether you can attend our occasion</p>
+        <br />
+        <label class="container">Yes
+          <input type="radio" name="response" id="res-yes" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">No
+          <input type="radio" name="response" id="res-no" />
+          <span class="checkmark"></span>
+        </label>
+        <br />
+        <br />
+        <input type="submit" />
+      </div>
+    </div>
+    <script src="index.js"></script>
   </body>
 </html>

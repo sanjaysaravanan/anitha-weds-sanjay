@@ -1,5 +1,24 @@
 const imgElement = document.querySelector(".img-logo");
 const headerElement = document.querySelector(".header-logo");
+const mobileNav = document.querySelector(".mobile-nav");
+const menuBtn = document.querySelector(".menu");
+
+let isNavOpen = false;
+
+const closeMenu = () => {
+  isNavOpen = false;
+  mobileNav.style.height = "0px";
+};
+
+menuBtn.addEventListener("click", () => {
+  if (isNavOpen) {
+    isNavOpen = false;
+    mobileNav.style.height = "0px";
+  } else {
+    isNavOpen = true;
+    mobileNav.style.height = "166px";
+  }
+});
 
 window.addEventListener("scroll", (e) => {
   if (window.scrollY > 0) {
@@ -7,7 +26,7 @@ window.addEventListener("scroll", (e) => {
     headerElement.style.top = "16px";
   } else {
     imgElement.style.width = "auto";
-    headerElement.style.top = "unset";
+    // headerElement.style.top = "32px";
   }
 });
 
@@ -52,3 +71,11 @@ const loadImages = () => {
     imgElement.id = `image-${i}`;
   });
 };
+
+const formElement = document.querySelector('form');
+
+const onSumbit = (e) => {
+  e.preventDefault();
+}
+
+formElement.addEventListener('submit', onSumbit);
