@@ -51,7 +51,6 @@ function updateCountdown() {
   hoursTag.innerText = hours;
   minsTag.innerText = minutes;
   secsTag.innerHTML = seconds;
-  console.log("updated", seconds);
 }
 
 setInterval(updateCountdown, 1000);
@@ -72,10 +71,38 @@ const loadImages = () => {
   });
 };
 
-const formElement = document.querySelector('form');
+const formElement = document.querySelector("form");
 
-const onSumbit = (e) => {
+const sendRsvp = async (payload) => {
+  return fetch("/api/send-mail", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json;charset=utf-8",
+    },
+    body: JSON.stringify(payload),
+  });
+};
+
+const onSumbit = async (e) => {
   e.preventDefault();
-}
+  const data = {};
 
-formElement.addEventListener('submit', onSumbit);
+  Array.from(e.target.elements).forEach((element) => {
+    if (element.nodeName === "INPUT" && element.type === "text") {
+      data[element.name] = element.value;
+    } else if (
+      element.nodeName === "INPUT" &&
+      element.type === "radio" &&
+      element.checked
+    ) {
+      data[element.name] = element.value;
+    }
+  });
+  try {
+    await sendRsvp(data);
+  } catch (err) {
+    console.log("Error", err);
+  }
+};
+
+formElement.addEventListener("submit", onSumbit);
