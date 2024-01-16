@@ -19,7 +19,7 @@ server.use(express.static('dist'))
 server.use(logger);
 
 server.post("/api/send-mail", async (req, res) => {
-  const { body } = req; // this will give use the info sent by the User
+  const { body } = req; // this will use the info sent by the User
   const { fname, response } = body;
 
   try {
