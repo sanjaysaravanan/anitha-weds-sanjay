@@ -83,8 +83,31 @@ const sendRsvp = async (payload) => {
   });
 };
 
+const overlayLoader = document.querySelector(".overlay-loader");
+
+const toastParent = document.querySelector(".toast-container");
+const toastElement = document.querySelector(".toast");
+
+const showMsg = (isError, msg="") => {
+  toastParent.classList.add("show");
+
+  toastElement.innerText = msg;
+
+  if (isError) {
+    toastElement.classList.add("error-bg");
+  } else {
+    toastElement.classList.add("success-bg");
+  }
+  setTimeout(() => {
+    toastParent.classList.remove("show");
+    toastElement.classList.remove("error-bg");
+    toastElement.classList.remove("success-bg");
+  }, 3000);
+};
+
 const onSumbit = async (e) => {
   e.preventDefault();
+  overlayLoader.style.display = "flex";
   const data = {};
 
   Array.from(e.target.elements).forEach((element) => {
@@ -100,8 +123,13 @@ const onSumbit = async (e) => {
   });
   try {
     await sendRsvp(data);
+    showMsg(false, 'Thank You !!!');
   } catch (err) {
     console.log("Error", err);
+    showMsg(true, 'Oops, Something wrong...');
+  } finally {
+    overlayLoader.style.display = "none";
+    e.target.reset();
   }
 };
 
