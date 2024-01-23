@@ -122,7 +122,8 @@ const onSumbit = async (e) => {
     }
   });
   try {
-    await sendRsvp(data);
+    const response = await sendRsvp(data);
+    console.log(response)
     showMsg(false, 'Thank You !!!');
   } catch (err) {
     console.log("Error", err);
