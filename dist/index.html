@@ -52,50 +52,53 @@
         <a href="#rsvp" onclick="closeMenu()">RSVP</a>
       </nav>
     </header>
-    <section id="home" class="title-section">
-      <img src="image.png" alt="header-logo" />
-      <h1>𝓐𝓷𝓲𝓽𝓱𝓪𝓿𝓪𝓵𝓵𝓲</h1>
-      <h2 style="margin: 0" >𝔀𝓮𝓭𝓼</h2>
-      <h1>𝓢𝓪𝓷𝓳𝓪𝔂</h1>
-      <h2>February 19, 2024</h2>
-      <h2>Madurai</h2>
-    </section>
-    <div class="count-down">
-      <div class="days">
-        <h1>0</h1>
-        <h4>Days</h4>
-      </div>
-      <div class="hours">
-        <h1>0</h1>
-        <h4>Hours</h4>
-      </div>
-      <div class="title">
-        <h1>Countdown</h1>
-        <h1>to our big day!</h1>
-      </div>
-      <div class="minutes">
-        <h1>0</h1>
-        <h4>Minutes</h4>
-      </div>
-      <div class="seconds">
-        <h1>0</h1>
-        <h4>Seconds</h4>
+    <div class="section" >
+      <section id="home" class="title-section">
+        <img src="image.png" alt="header-logo" />
+        <h1 id="1" class="hidden" >𝓐𝓷𝓲𝓽𝓱𝓪𝓿𝓪𝓵𝓵𝓲</h1>
+        <h2 id="2" style="margin: 0" class="hidden"  >𝔀𝓮𝓭𝓼</h2>
+        <h1 id="3" class="hidden" >𝓢𝓪𝓷𝓳𝓪𝔂</h1>
+        <h2 id="4" class="hidden" >February 19, 2024</h2>
+        <h2 id="5" class="hidden" >Madurai</h2>
+      </section>
+      <div id="6" class="count-down hidden">
+        <div class="days">
+          <h1>0</h1>
+          <h4>Days</h4>
+        </div>
+        <div class="hours">
+          <h1>0</h1>
+          <h4>Hours</h4>
+        </div>
+        <div class="title">
+          <h1>Countdown</h1>
+          <h1>to our big day!</h1>
+        </div>
+        <div class="minutes">
+          <h1>0</h1>
+          <h4>Minutes</h4>
+        </div>
+        <div class="seconds">
+          <h1>0</h1>
+          <h4>Seconds</h4>
+        </div>
       </div>
     </div>
-    <div id="functions" class="site-section">
-      <h1>Functions</h1>
+    <div id="functions" class="site-section section">
+      <h1 id="7" class="hidden" >Functions</h1>
       <div>
-        <div class="event-description">
-          <h3>Wedding</h3>
+        <div id="8" class="event-description hidden">
+          <h3 id="9" class="hidden" >Wedding</h3>
           <img
             src="https://cdn.weddingwishlist.com/images/website/functions/wedding-function-wedding.jpg"
             alt="Wedding"
+            id="10" class="hidden"
           />
-          <div style="margin: 32px">
+          <div id="11" class="hidden"  style="margin: 32px">
             <h4>Monday<br />February 19 2024</h4>
             <h4>9:30 AM</h4>
           </div>
-          <div class="text-div">
+          <div id="12" class="text-div hidden">
             <i class="fa-solid fa-location-dot fa-2x"></i>
             <a
               href="https://maps.app.goo.gl/6xrok5CvLw7eaYAq8"
@@ -108,17 +111,26 @@
         </div>
       </div>
       <div>
-        <div class="event-description">
-          <h3>Reception</h3>
+        <div id="13" class="event-description hidden">
+          <h3 id="14" class="hidden" >Reception</h3>
           <img
             src="reception.JPG"
             alt="Reception"
+            id="15"
+            class="hidden"
           />
-          <div style="margin: 32px">
+          <div 
+            id="16"
+            class="hidden" 
+            style="margin: 32px"
+          >
             <h4>Monday<br />February 19 2024</h4>
             <h4>10:30 AM</h4>
           </div>
-          <div class="text-div">
+          <div 
+            id="17"
+            class="text-div hidden" 
+          >
             <i class="fa-solid fa-location-dot fa-2x"></i>
             <a
               href="https://maps.app.goo.gl/TxEoCfqn2jsUarzCA"
@@ -130,29 +142,29 @@
         </div>
       </div>
     </div>
-    <div id="gallery" class="site-section">
-      <h1>Gallery</h1>
+    <div id="gallery" class="site-section section">
+      <h1 id="18" class="hidden" >Gallery</h1>
       <div class="cards">
-        <div class="card">
+        <div id="19" class="hidden card">
           <img src="https://cdn.weddingwishlist.com/images/website/gallery/gallery_1.png" alt="One" />
         </div>
-        <div class="card">
+        <div id="20" class="hidden card">
           <img src="https://cdn.weddingwishlist.com/images/website/gallery/gallery_2.png" alt="Two" />
         </div>
-        <div class="card">
+        <div id="21" class="hidden card">
           <img src="https://cdn.weddingwishlist.com/images/website/gallery/gallery_3.png" alt="Three" />
         </div>
-        <div class="card">
+        <div id="22" class="hidden card" >
           <img src="https://cdn.weddingwishlist.com/images/website/gallery/gallery_4.png" alt="Four" />
         </div>
-        <div class="card">
+        <div id="23" class="hidden card" >
           <img src="https://cdn.weddingwishlist.com/images/website/gallery/gallery_5.png" alt="Five" />
         </div>
       </div>      
     </div>
-    <div id="rsvp" class="site-section">
-      <h1>R S V P</h1>
-      <form class="rsvp-container" >
+    <div id="rsvp" class="site-section section">
+      <h1 id="24" class="hidden" >R S V P</h1>
+      <form id="25" class="hidden rsvp-container" >
         <input name="fname" id="fname" placeholder="Full Name" />
         <br />
         <p>Please let us know whether you can attend our occasion</p>

@@ -9,6 +9,11 @@ body {
   scroll-behavior: smooth;
 }
 
+.section {
+  min-height: 100vh;
+  padding-top: 128px;
+}
+
 .overlay-loader {
   background-color: rgba(243, 140, 140, 0.4);
   height: 100vh;
@@ -37,11 +42,12 @@ header {
   top: 0px;
   width: calc(100vw - 48px);
   min-height: 90px;
+  z-index: 99999;
 }
 
 .title-section {
   /* background-image: url("./background-18.png"); */
-  padding: 128px 0 0;
+  padding: 0 0 0;
   text-align: center;
   color: #df9f07;
 }
@@ -70,7 +76,7 @@ header {
   background-color: rgba(204, 204, 204, 0.18);
   color: #b6060d !important;
   padding: 16px;
-  margin-top: 4px;
+  margin: 24px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -213,8 +219,11 @@ header a {
 
 .rsvp-container {
   background-color: #b77530;
-  margin: 16px;
+  margin: 48px 16px;
   padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding-top: 48px;
   text-align: center;
   background-position: 5px 5px, 99% 5px, 5px 99%, 99% 99%;
@@ -430,6 +439,7 @@ button {
     display: inline;
     max-width: 250px;
     object-fit: contain;
+    margin-bottom: 24px;
   }
   .title-section {
     margin-left: 0px;
@@ -462,6 +472,30 @@ button {
   .desk-nav {
     display: none;
   }
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 0.7s;
+  filter: blur(5px);
+}
+
+.from-left {
+  transform: translateX(-100%);
+}
+
+.from-right {
+  transform: translateX(100%);
+}
+
+.zoom-in {
+  transform: scale(0);
+}
+
+.showElement {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1, 1) translateX(0);
 }
 
 @-webkit-keyframes fadein {

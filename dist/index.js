@@ -88,7 +88,7 @@ const overlayLoader = document.querySelector(".overlay-loader");
 const toastParent = document.querySelector(".toast-container");
 const toastElement = document.querySelector(".toast");
 
-const showMsg = (isError, msg="") => {
+const showMsg = (isError, msg = "") => {
   toastParent.classList.add("show");
 
   toastElement.innerText = msg;
@@ -123,11 +123,11 @@ const onSumbit = async (e) => {
   });
   try {
     const response = await sendRsvp(data);
-    console.log(response)
-    showMsg(false, 'Thank You !!!');
+    console.log(response);
+    showMsg(false, "Thank You !!!");
   } catch (err) {
     console.log("Error", err);
-    showMsg(true, 'Oops, Something wrong...');
+    showMsg(true, "Oops, Something wrong...");
   } finally {
     overlayLoader.style.display = "none";
     e.target.reset();
@@ -135,3 +135,60 @@ const onSumbit = async (e) => {
 };
 
 formElement.addEventListener("submit", onSumbit);
+
+const obsCallback = (delay) => (entries) => {
+  const [entry] = entries;
+
+  if (entry.isIntersecting) {
+    entry.target.classList.add("showElement");
+    entry.target.style.transitionDelay = `${0.4 * delay}s`;
+  }
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = [1,2,3,4,5,6].map((val) => {
+    return document.getElementById(`${val}`);
+  });
+
+  elements.forEach((element, i) => {
+    if (element) {
+      const observer = new IntersectionObserver(obsCallback(i));
+      observer.observe(element);
+    }
+  });
+
+  const elementsSetTwo = [7,8,9,10,11,12,13, 14, 15, 16, 17].map((val) => {
+    return document.getElementById(`${val}`);
+  });
+
+  elementsSetTwo.forEach((element, i) => {
+    if (element) {
+      const delay = i <= 8 ? i : 4;
+      const observer = new IntersectionObserver(obsCallback(i));
+      observer.observe(element);
+    }
+  });
+
+  const elementsSetFour = [18, 19, 20, 21, 22, 23].map((val) => {
+    return document.getElementById(`${val}`);
+  });
+
+  elementsSetFour.forEach((element, i) => {
+    if (element) {
+      const delay = i <= 19 ? i : 0;
+      const observer = new IntersectionObserver(obsCallback(delay));
+      observer.observe(element);
+    }
+  });
+
+  const elementsSetFive = [24, 25].map((val) => {
+    return document.getElementById(`${val}`);
+  });
+
+  elementsSetFive.forEach((element, i) => {
+    if (element) {
+      const observer = new IntersectionObserver(obsCallback(i));
+      observer.observe(element);
+    }
+  });
+});
