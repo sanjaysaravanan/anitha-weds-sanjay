@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   elementsSetTwo.forEach((element, i) => {
     if (element) {
-      const delay = i <= 8 ? i : 4;
+      const delay = i <= 5 ? i : 0;
       const observer = new IntersectionObserver(obsCallback(i));
       observer.observe(element);
     }
@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   elementsSetFour.forEach((element, i) => {
     if (element) {
-      const delay = i <= 19 ? i : 0;
+      const delay = i <= 2 ? i : 0;
       const observer = new IntersectionObserver(obsCallback(delay));
       observer.observe(element);
     }
