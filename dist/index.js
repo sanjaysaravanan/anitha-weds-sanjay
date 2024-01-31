@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  const elementsSetFour = [18, 19, 20, 21, 22, 23].map((val) => {
+  const elementsSetFour = [18, 19, 21, 22, 23].map((val) => {
     return document.getElementById(`${val}`);
   });
 
