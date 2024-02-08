@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  const elementsSetFour = [18, 19, 21, 22, 23, 26, 27, 28, 29, 30].map(
+  const elementsSetFour = [18, 19, 20, 21, 22, 23, 26, 27, 28, 29, 30].map(
     (val) => {
       return document.getElementById(`${val}`);
     }
