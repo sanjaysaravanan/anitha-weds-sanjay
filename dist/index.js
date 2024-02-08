@@ -146,7 +146,7 @@ const obsCallback = (delay) => (entries) => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  const elements = [1,2,3,4,5,6].map((val) => {
+  const elements = [1, 2, 3, 4, 5, 6].map((val) => {
     return document.getElementById(`${val}`);
   });
 
@@ -157,9 +157,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  const elementsSetTwo = [7,8,9,10,11,12,13, 14, 15, 16, 17].map((val) => {
-    return document.getElementById(`${val}`);
-  });
+  const elementsSetTwo = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17].map(
+    (val) => {
+      return document.getElementById(`${val}`);
+    }
+  );
 
   elementsSetTwo.forEach((element, i) => {
     if (element) {
@@ -169,9 +171,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  const elementsSetFour = [18, 19, 21, 22, 23].map((val) => {
-    return document.getElementById(`${val}`);
-  });
+  const elementsSetFour = [18, 19, 21, 22, 23, 26, 27, 28, 29, 30].map(
+    (val) => {
+      return document.getElementById(`${val}`);
+    }
+  );
 
   elementsSetFour.forEach((element, i) => {
     if (element) {
